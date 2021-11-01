@@ -1,0 +1,64 @@
+.navbar{
+    min-height: 80px;
+    width: 100%;
+    background-color: rgb(19, 18, 18);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar-container .title{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.navbar-container .title > *{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.icon-github{
+    font-size: 2rem;
+}
+.navbar-container .title h1{
+    font-size: 1.6rem;
+}
+.navbar-container .menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar-container .menu .menu-title{
+    width: 100px;
+    text-decoration: none;
+    color:white;
+    font-size: 1.6rem;
+}
+.navbar-container .menu .menu-title:link,
+.navbar-container .menu .menu-title:visited{
+    color:white;
+}
+
+@media screen and (max-width:525px){
+    .navbar-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .navbar-container .menu{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

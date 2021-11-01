@@ -1,0 +1,107 @@
+.content-container{
+    width: 100%;
+    min-height: calc( 100vh - 180px);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.resumo{
+    width: calc(100% - 20px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    backdrop-filter: blur(25px);
+    border-radius: 2rem;
+    box-shadow: 5px 5px 10px black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.resumo .img-container{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 10px;
+    overflow: hidden;
+}
+.resumo .img-container img{
+    position: absolute;
+    width: 300px;
+    left:50%;
+    transform: translate(-50%,-20px);
+}
+.resumo .text-resumo{
+    width: calc(100% - 240px);
+    margin-right: 20px;
+}
+.resumo .text-resumo h1{
+    font-size: 2rem;
+}
+.resumo .text-resumo p{
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+.content > section{
+    backdrop-filter: blur(20px);
+    background-color: rgba(43, 43, 43, 0.555);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 10px black;
+
+}
+.content > section > .title{
+    background-color: black;
+    text-align: center;
+    height: 40px;
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.content > section > .title:hover{
+    height: 50px;
+    width: 220px;
+    font-size: 1.4rem;
+}
+
+.content > section > .text{
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+.content > section > .text ul li a{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.6rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media screen and (max-width:525px){
+    .resumo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .resumo .text-resumo{
+        width: calc(100% - 40px);
+        
+    }
+}

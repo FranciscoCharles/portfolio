@@ -49,7 +49,6 @@
 .navbar-container .menu .menu-title:visited{
     color:white;
 }
-
 @media screen and (max-width:525px){
     .navbar-container{
         flex-direction: column;

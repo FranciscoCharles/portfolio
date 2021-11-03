@@ -60,25 +60,29 @@
 
 }
 .content > section > .title{
-    background-color: black;
     text-align: center;
-    height: 40px;
-    width: 200px;
+    height: 60px;
+    width: 220px;
     min-width: 170px;
-
+    
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.content > section > .title a{
+    border-radius: 20px;
+    height: 40px;
+    width: 200px;
+    background-color: black;
     font-size: 1.2rem;
 }
-.content > section > .title:hover{
+.content > section > .title a:hover{
     height: 50px;
     width: 220px;
     font-size: 1.4rem;
@@ -88,10 +92,11 @@
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
     text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .content > section > .text ul{
-    margin-left: 10px;
-    margin-right: 10px;
+    list-style-position: inside;
 }
 .content > section > .text ul li a{
     text-decoration: none;
@@ -119,12 +124,14 @@
     }
 }
 @media screen and (max-width:300px){
-    .content > section > .title{
-        width: 70px;
+    .content > section > .title a{
+        width: 100px;
+        height: 35px;
         font-size: 1rem;
     }
-    .content > section > .title:hover{
-        width: 90px;
+    .content > section > .title a:hover{
+        width: 120px;
+        height: 40px;
         font-size: 1.2rem;
     }
 }

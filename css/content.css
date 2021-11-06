@@ -6,29 +6,29 @@
 }
 .resumo{
     width: calc(100% - 40px);
+    min-height: 300px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    backdrop-filter: blur(25px);
-    border-radius: 2rem;
+    background-color: rgba(43, 43, 43, 0.555);
+    border-radius: 10px;
     box-shadow: 5px 5px 10px black;
     margin-left: 20px;
     margin-right: 20px;
 }
 .resumo .img-container{
     position: relative;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    margin: 10px;
-    overflow: hidden;
+    height: 300px;
+    width: 180px;
+    margin: 20px 20px;
 }
 .resumo .img-container img{
     position: absolute;
-    width: 300px;
+    height: 280px;
+    top:50%;
     left: 50%;
-    transform: translate(-50%,-20px);
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
 }
 .resumo .text-resumo{
     width: calc(100% - 240px);
@@ -44,7 +44,7 @@
 }
 
 .content > section{
-    backdrop-filter: blur(20px);
+    
     background-color: rgba(43, 43, 43, 0.555);
     border-radius: 20px;
     display: flex;
@@ -61,7 +61,7 @@
 }
 .content > section > .title{
     text-align: center;
-    height: 60px;
+    min-height: 80px;
     width: 220px;
     min-width: 170px;
     
@@ -76,34 +76,130 @@
     align-items: center;
 }
 .content > section > .title a{
-    border-radius: 20px;
-    height: 40px;
-    width: 200px;
+    border-radius: 10px;
+    min-height: 50px;
+    min-width: 200px;
+    width: 300px;
     background-color: black;
     font-size: 1.2rem;
 }
-.content > section > .title a:hover{
-    height: 50px;
-    width: 220px;
-    font-size: 1.4rem;
-}
 
-.content > section > .text{
+.content > section > .text,
+.content > section > .container  > .text{
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
     text-align: justify;
     margin-left: 20px;
     margin-right: 20px;
 }
-.content > section > .text ul{
+.content > section > .text .ul-links,
+.content > section > .container > .text ul{
     list-style-position: inside;
 }
-.content > section > .text ul li a{
+.content > section > .text .ul-links li a{
     text-decoration: none;
     font-weight: bolder;
     font-size: 1.6rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.829);
     font-family: Arial, Helvetica, sans-serif;
+}
+.content > section > .text .ul-links li a:hover{
+    text-shadow: 0 0 5px white;
+}
+.habilidades{
+    display: inline-block;
+    width: calc(100% - 40px);
+    
+}
+.habilidades .container{
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.habilidades > .container > .text,
+.habilidades > .container > .img-container{
+    width: 50%;
+}
+.habilidades > .container > .img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.habilidades > .container > .img-container img{
+    height: 400px;
+    border-radius: 15px;
+}
+.habilidades > .container > .img-container.hb-comportamental img{
+    height: 300px;
+    border-radius: 15px;
+}
+.habilidades > .container > .text ul li ul{
+    list-style-type: none;
+    list-style-position: inside;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+.skill-container{
+    min-width: 80px;
+    min-height: 100px;
+    text-align: center;
+    margin: 0 5px;
+}
+.skill-container > .title{
+    position: relative;
+    box-shadow: inset 2px 2px 2px #161616; 
+    background-color: rgba(43, 43, 43, 0.555);
+    height: 30px;
+    border-radius: 10px;
+}
+.skill-container > .title > h1{
+    position: absolute;
+    font-size: 1rem;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.skill-container > .img-container{
+    width: auto;
+    margin-top: 10px;
+    
+}
+.skill-container > .img-container > img{
+    min-height: 70px;
+    width: 70px;
+    border-radius: 25%;
+    
+    filter: grayscale();
+    background-color: rgba(43, 43, 43, 0.555);
+    transition: .5s all;
+    box-shadow: inset 2px 2px 2px #161616;
+}
+.skill-container:hover > .img-container > img,
+.skill-container:hover > .title{
+    background-color: rgba(255, 255, 255, 0.856);
+    box-shadow: none;
+    filter: none;
+    color: black;
+    font-weight: 900;
+}
+@media screen and (max-width:840px){
+    .habilidades .container{
+        flex-direction: column;
+    }
+    .habilidades .container > .img-container,
+    .habilidades .container > .text{
+        width: 100%;
+        border-radius: 20px;
+    }
 }
 @media screen and (max-width:525px){
     .resumo{
@@ -128,10 +224,5 @@
         width: 100px;
         height: 35px;
         font-size: 1rem;
-    }
-    .content > section > .title a:hover{
-        width: 120px;
-        height: 40px;
-        font-size: 1.2rem;
     }
 }

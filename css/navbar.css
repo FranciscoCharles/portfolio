@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.575);
 }
 .navbar-container{
     height: 100%;

@@ -43,7 +43,9 @@
     font-family: 'Roboto', sans-serif;
     text-align: justify;
 }
-
+.resumo .text-resumo p + p{
+    margin-top: 10px;
+}
 .content > section{
     
     background-color: rgba(43, 43, 43, 0.555);
@@ -170,7 +172,8 @@
     min-height: 100px;
     text-align: center;
     margin: 0 5px;
-    
+    --angle: 0deg;
+    transform: rotateY( var(--angle) );
 }
 .tool-container > .title{
     position: relative;
@@ -212,9 +215,9 @@
     filter: none;
     color: black;
 }
-.tool-container:hover{
+/* .tool-container:hover{
    animation: 1.5s rotate linear infinite;
-}
+} */
 @keyframes rotate {
     from{
         transform: rotateY(0deg);

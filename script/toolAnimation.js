@@ -1,52 +1,50 @@
 (function initToolContainerAnimation() {
 
-	const animationTime = 150;
+	const animationTimeMilliseconds = 150;
 	const arrayToolElements = Array.from(
 		document.querySelectorAll('.tool-container')
 	).map(element => (
 		{
 			domElement: element,
 			timeId: null,
-			animate: false,
-			mouseover: false
+			isAnimating: false,
+			set angle(value) {
+				this.domElement.style.setProperty('--angle', value + 'deg');
+			},
+			get angle() {
+				const elementComputedStyle = window.getComputedStyle(this.domElement);
+				const angle = +elementComputedStyle.getPropertyValue('--angle').replace('deg', '');
+				return angle;
+			}
 		}
 	));
 
-	function mouseOverAnimation(arrayElement) {
+	function mouseEnterAnimation(arrayElement) {
 		if (arrayElement.isAnimating) return;
-		const element = arrayElement.domElement;
 		arrayElement.isAnimating = true;
-		arrayElement.mouseover = false;
 		arrayElement.timeId = setInterval(() => {
-			const elementComputedStyle = window.getComputedStyle(element);
-			const angle = +elementComputedStyle.getPropertyValue('--angle').replace('deg', '');
-			element.style.setProperty('--angle', (10 + angle) % 360 + 'deg');
-		}, animationTime);
+			arrayElement.angle = (10 + arrayElement.angle) % 360;
+		}, animationTimeMilliseconds);
 	}
 
 	function mouseLeaveAnimation(arrayElement) {
-		if (arrayElement.mouseover) return;
-		const element = arrayElement.domElement;
-		arrayElement.mouseover = true;
+		if (!arrayElement.isAnimating) return;
 		clearInterval(arrayElement.timeId);
-		arrayElement.timeId = null;
 		arrayElement.timeId = setInterval(() => {
-			const elementComputedStyle = window.getComputedStyle(element);
-			const angle = +elementComputedStyle.getPropertyValue('--angle').replace('deg', '');
+			const angle = arrayElement.angle;
 			if (angle < 360) {
-				element.style.setProperty('--angle', 10 + angle + 'deg');
+				arrayElement.angle = 10 + angle;
 			} else {
 				clearInterval(arrayElement.timeId);
-				element.style.setProperty('--angle', '0deg');
-				arrayElement.mouseover = false;
 				arrayElement.isAnimating = false;
+				arrayElement.angle = 0;
 			}
-		}, animationTime);
+		}, animationTimeMilliseconds);
 	}
 
 	arrayToolElements.forEach(arrayElement => {
 		const element = arrayElement.domElement;
-		element.addEventListener('mouseenter', () => mouseOverAnimation(arrayElement));
+		element.addEventListener('mouseenter', () => mouseEnterAnimation(arrayElement));
 		element.addEventListener('mouseleave', () => mouseLeaveAnimation(arrayElement));
 	})
 })();

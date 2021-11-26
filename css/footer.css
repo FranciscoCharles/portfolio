@@ -1,73 +1,69 @@
-.footer{
-    min-height: 100px;
-    width: 100%;
-    background-color: rgb(19, 18, 18);
+.footer-container {
+  min-height: 100px;
+  width: 100%;
+  background-color: rgb(19, 18, 18);
 }
-.footer-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
-.footer-container > .text-container{
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.footer-text {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.footer-container > h1{
-    color: white;
-    font-size: 1.3rem;
-    height: 30px;
-    margin:0;
-    /*
-    font-family: 'Grand Hotel', cursive;
-	font-family: 'Fruktur', cursive;
-    */
-    font-family: 'Lobster', cursive;
-    text-align: center;
-    letter-spacing: 3px;
+.footer-text > h1 {
+  color: white;
+  font-size: 1.3rem;
+  height: 30px;
+  margin: 0;
+  font-family: "Lobster", cursive;
+  text-align: center;
+  letter-spacing: 3px;
 }
-.icons-contato{
-    font-size: 2rem;
-    display: flex;
-    height: 3rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+.footer-icons {
+  font-size: 2rem;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.icons-contato a{
-    margin-top: 10px;
-    text-decoration: none;
-    color: white;
+.footer-icons a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
 }
-.icons-contato > .icon{
-    margin-left: 5px;
-    margin-right: 5px;
+.footer-icons > .icon {
+  margin-left: 5px;
+  margin-right: 5px;
 }
-.icons-contato img.icon {
-    width: 30px;
+.footer-icons img.icon {
+  width: 30px;
 }
-.copyright{
-    font-size: 2rem;
+.copyright {
+  font-size: 2rem;
 }
-.icons-contato > :not(img):hover{
-    font-size: 3rem;
+.footer-icons > :not(img):hover {
+  font-size: 3rem;
 }
-.icons-contato img.icon:hover {
-    width: 40px;
+.footer-icons img.icon:hover {
+  width: 40px;
 }
-@media screen and (max-width:400px){
-    .footer-container h1{
-        font-size: 1rem;
-    }
+@media screen and (max-width: 400px) {
+  .footer-container h1 {
+    font-size: 1rem;
+  }
 }
-@media screen and (max-width:270px){
-    .footer-container h1{
-        font-size: 5vw;
-    }
+@media screen and (max-width: 270px) {
+  .footer-container h1 {
+    font-size: 5vw;
+  }
 }

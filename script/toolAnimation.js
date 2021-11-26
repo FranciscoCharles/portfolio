@@ -1,5 +1,6 @@
-(function initToolContainerAnimation() {
+(function createAnimations() {
 
+	/*tool-container animation code*/
 	const animationTimeMilliseconds = 150;
 	const arrayToolElements = Array.from(
 		document.querySelectorAll('.tool-container')
@@ -8,6 +9,7 @@
 			domElement: element,
 			timeId: null,
 			isAnimating: false,
+			isMouseEnter: false,
 			set angle(value) {
 				this.domElement.style.setProperty('--angle', value + 'deg');
 			},
@@ -20,8 +22,12 @@
 	));
 
 	function mouseEnterAnimation(arrayElement) {
-		if (arrayElement.isAnimating) return;
+		if (arrayElement.isMouseEnter && arrayElement.isAnimating) return;
 		arrayElement.isAnimating = true;
+		arrayElement.isMouseEnter = true;
+		if (arrayElement.timeId !== null) {
+			clearInterval(arrayElement.timeId);
+		}
 		arrayElement.timeId = setInterval(() => {
 			arrayElement.angle = (10 + arrayElement.angle) % 360;
 		}, animationTimeMilliseconds);
@@ -29,13 +35,17 @@
 
 	function mouseLeaveAnimation(arrayElement) {
 		if (!arrayElement.isAnimating) return;
-		clearInterval(arrayElement.timeId);
+		arrayElement.isMouseEnter = false;
+		if (arrayElement.timeId !== null) {
+			clearInterval(arrayElement.timeId);
+		}
 		arrayElement.timeId = setInterval(() => {
 			const angle = arrayElement.angle;
 			if (angle < 360) {
 				arrayElement.angle = 10 + angle;
 			} else {
 				clearInterval(arrayElement.timeId);
+				arrayElement.timeId = null;
 				arrayElement.isAnimating = false;
 				arrayElement.angle = 0;
 			}

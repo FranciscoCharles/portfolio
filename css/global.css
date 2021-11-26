@@ -1,23 +1,19 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    font-size: 16px;
-    scroll-behavior: smooth;
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
-body{
-    font-size: 0.625rem;
-    position: relative;
-    min-height: 100vh;
-    min-width: 230px;
-    display: block;
-    font-family: 'Lobster', cursive;
-    color: white;
-    background-color: #161616;
-    /* 
-    background-image: url('../asserts/constant-loubier-eWuc6TXc8Ok-unsplash.jpg');
-    background-size: cover;
-    background-position: left center; */
+body {
+  font-size: 0.625rem;
+  position: relative;
+  min-height: 100vh;
+  min-width: 230px;
+  display: block;
+  font-family: "Lobster", cursive;
+  color: white;
+  background-color: #161616;
 }

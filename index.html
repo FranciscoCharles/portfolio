@@ -15,34 +15,29 @@
 	<link rel="stylesheet" href='css/navbar.css'>
 	<link rel="stylesheet" href='css/content.css'>
 	<link rel="stylesheet" href='css/footer.css'>
-	<!--
-	font-family: 'Lobster', cursive;
-	font-family: 'Grand Hotel', cursive;
-	font-family: 'Fruktur', cursive;
-	-->
 	<title>Portfolio</title>
 </head>
 
 <body>
-	<nav class="navbar">
-		<div class="navbar-container">
-			<div class="title">
+	<nav class="navbar-container">
+		<div class="navigation">
+			<div class="navigation__title">
 				<ion-icon class="icon-github" name="logo-github"></ion-icon>
 				<h1>
 					</ion-icon>Portifolio</h1>
 			</div>
-			<div class="menu">
-				<a class="menu-title" href="#projetos">Projetos</a>
+			<div class="navigation__menu">
+				<a class="navigation__menu-title" href="#projects">Projetos</a>
 			</div>
 		</div>
 	</nav>
 	<div class="content-container">
 		<div class="content">
-			<div class="resumo">
-				<div class="img-container">
+			<div class="summary">
+				<div class="summary__img-container">
 					<img src="asserts/avatar.png" alt="meu avatar">
 				</div>
-				<div class="text-resumo">
+				<div class="summary__text">
 					<h1>Olá, eu sou o Charles</h1>
 					<br />
 					<p>
@@ -68,15 +63,15 @@
 				</div>
 			</div>
 			<section class="skill">
-				<div class="title">
-					<a id="habilidades">
+				<div class="section-title">
+					<a id="#">
 						<h1>
 							Habilidades comportamentais
 						</h1>
 					</a>
 				</div>
-				<div class="container">
-					<figure class="img-container hb-comportamental">
+				<div class="section-content skill-section-content">
+					<figure class="skill-figure behavioral-skill">
 						<img src="asserts/matteo-di-iorio-VD-Vjc8VmRA-unsplash.jpg" alt="image qualquer">
 						<figcaption>
 							Photo by <a
@@ -99,14 +94,14 @@
 				</div>
 			</section>
 			<section class="skill">
-				<div class="title">
-					<a id="habilidades">
+				<div class="section-title">
+					<a id="#">
 						<h1>
 							Habilidades Tecnicas
 						</h1>
 					</a>
 				</div>
-				<div class="container">
+				<div class="section-content skill-section-content">
 					<div class="text">
 						<ul>
 							<li>Clean Code;</li>
@@ -116,12 +111,12 @@
 								<ul>
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													MySql
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="icon mysql"/>
 											</div>
@@ -129,12 +124,12 @@
 									</li>
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													MongoDB
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" alt="icon mongodb" />
 											</div>
@@ -142,24 +137,24 @@
 									</li>
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													MariaDB
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img src="asserts/mariadb.png" alt="icon mariadb"/>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													SQLite
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img src="asserts/sqlite.png" alt="icon sqlite"/>
 											</div>
 										</div>
@@ -171,24 +166,24 @@
 								<ul>
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													Python
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="icon python" />
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													Javascript
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="icon js" />
 											</div>
@@ -196,24 +191,24 @@
 									</li>
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													C
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="icon C"/>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													ReactJS
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="icon reactJS"/>
 											</div>
 										</div>
@@ -221,49 +216,49 @@
 
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													Flask
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="icon flask"/>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													CSS3
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="icon css3"/>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													Jupyter
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" alt="icon jupyter-notebook"/>
 											</div>
 										</div>
 									</li>
 									<li>
-										<div class="tool-container sqlalchemy">
-											<div class="title">
+										<div class="tool-container">
+											<div class="tool-title sqlalchemy">
 												<h1>
 													SQLAchemy
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img
 													src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" alt="sqlAlchemy" />
 											</div>
@@ -271,24 +266,24 @@
 									</li>
 									<li>
 										<div class="tool-container">
-											<div class="title">
+											<div class="tool-title">
 												<h1>
 													Git
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="icon git"/>
 											</div>
 										</div>
 									</li>
 									<li>
-										<div class="tool-container vscode">
-											<div class="title">
+										<div class="tool-container">
+											<div class="tool-title vscode">
 												<h1>
 													VS Code
 												</h1>
 											</div>
-											<div class="img-container">
+											<div class="tool-img-container">
 												<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="icon vscode"/>
 											</div>
 										</div>
@@ -297,7 +292,7 @@
 							</li>
 
 					</div>
-					<figure class="img-container">
+					<figure class="skill-figure">
 						<img src="asserts/goran-ivos-iOykDIkZLQw-unsplash.jpg" alt="imagem computador">
 						<figcaption>
 							Photo by <a
@@ -310,8 +305,8 @@
 
 			</section>
 			<section>
-				<div class="title">
-					<a id="projetos">
+				<div class="section-title">
+					<a id="projects">
 						<h1>
 							Projetos
 						</h1>
@@ -366,9 +361,9 @@
 
 		</div>
 	</div>
-	<footer class='footer'>
-		<div class="footer-container">
-			<div class="icons-contato">
+	<footer class="footer-container">
+		<div class="footer">
+			<div class="footer-icons">
 				<a href="https://github.com/FranciscoCharles">
 					<ion-icon class="icon" name="logo-github"></ion-icon>
 				</a>
@@ -382,12 +377,13 @@
 					<ion-icon name="logo-google"></ion-icon>
 				</a>
 			</div>
-			<div class="text-container">
+			<div class="footer-text">
 				<h1>Francisco Charles <span class="copyright">&copy;</span> 2021</h1>
 			</div>
 		</div>
 	</footer>
-	<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	<script type="text/javascript" src="script/footer.js"></script>
 	<script type="text/javascript" src="script/toolAnimation.js"></script>
 	<!-- 
